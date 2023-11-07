@@ -1,0 +1,55 @@
+@import _responsive
+
+$side-indent-desktop: 150px
+$side-indent-tablet: 60px
+$side-indent-phone: 16px
+
+$white: #fff
+$black: #454545
+$blue-primary: #1c85c8
+
+%default-font
+    font-family: 'Hind Madurai', sans-serif
+    font-size: 18px
+    font-weight: 300
+    line-height: 140%
+    line-height: 1.45
+    color: #808080
+%btn
+    display: inline-block
+    font-family: Montserrat,'sans-serif'
+    font-weight: 600
+    font-size: 20px
+    line-height: 1.2
+    padding: 12px 24px
+    background-color: #1c85c8
+    color: #fff
+    border: 1px solid #1c85c8
+    border-radius: 3px
+%blog-widget
+    margin-bottom: 30px
+    background-color: #fff
+    box-shadow: 0 4px 13px rgba(56,87,140,.2)
+    border-radius: 10px
+    padding: 26px 30px
+%flex-row-center
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+%flex-col-center
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+%social-icon
+    border: 1px solid transparent
+    @extend %flex-col-center
+    border-radius: 50%
+    background: transparent
+    height: 40px
+    width: 40px
+    padding: 12px
+    &:hover
+        background: linear-gradient(to right,rgba(0,0,0,.1) 0,rgba(0,0,0,.1) 100%)

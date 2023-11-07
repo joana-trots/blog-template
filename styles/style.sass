@@ -1,0 +1,1136 @@
+@import _vars
+@import _responsive
+@import _nav-icon
+
+*,
+*::after,
+*::before
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+html, 
+body
+    scroll-behavior: smooth
+    
+body
+    @extend %default-font
+    background-color: #F8FDFF
+    color: $black
+    overflow-x: hidden
+li
+    list-style: none
+a
+    text-decoration: none
+    color: inherit
+    transition: all .3s
+    &:hover
+        cursor: pointer
+h1
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    font-size: 48px
+    line-height: 1.23
+    color: $white
+    @include media("<1600")
+        font-size: 44px
+        line-height: 1.227
+    @include media("<=desktop")
+        font-size: 40px
+        line-height: 1.225
+    @include media("<=992px")
+        text-shadow: 2px 2px 4px rgba(0,0,0,.5)
+        text-align: center
+        max-width: 550px
+        margin: auto
+    @include media("<tablet")
+        font-size: 30px
+        line-height: 1.233
+h2
+    font-family: 'Montserrat', sans-serif
+    font-size: 24px
+    color: $blue-primary
+    font-weight: 600
+    line-height: 1.4
+    @include media("<=desktop")
+        font-size: 22px
+    @include media("<tablet")
+        font-size: 20px
+h3
+    font-family: 'Montserrat', sans-serif
+    font-weight: 600
+    font-size: 20px
+    line-height: 1.375
+    @include media("<=desktop")
+        font-size: 18px
+    @include media("<tablet")
+        font-size: 16px
+h5
+    font-family: 'Montserrat', sans-serif
+    font-size: 18px
+    font-weight: 600
+    line-height: 1.375    
+.btn
+    @extend %btn
+    &:hover
+        color: $blue-primary
+        border-color: $blue-primary
+        background-color: $white
+button,
+.btn
+    transition: .5s
+    &:hover
+        cursor: pointer
+.wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    min-height: 100%
+.header
+    position: fixed
+    top: 0
+    z-index: 2
+    width: 100%
+.main
+    flex: 1 0 auto
+    position: relative
+.footer
+    flex: 0 0 auto
+.container
+    position: relative
+    width: 100%
+    margin: 0 auto
+    max-width: 1520px
+    @include media("<1600px")
+        max-width: 1140px
+    @include media("<desktop")
+        max-width: 960px
+    @include media("<=992px")
+        max-width: 720px
+
+/* HEADER */
+
+.header
+    .container
+        box-shadow: 0 5px 13px rgba(56,87,140,0)
+        transition: box-shadow 0.2s
+        @include media("<desktop")
+            max-width: 100%
+            padding: 0 24px
+        @include media("<=1200px")
+            background-color: $white
+        @include media("<tablet")
+            padding: 0
+    &__inner
+        @extend %flex-row-center
+        justify-content: space-between
+        padding: 35px 0 15px
+        @include media("<=1200px")
+            padding: 20px
+            
+    .menu
+        @extend %flex-row-center
+        @include media("<=1200px")
+            display: none
+    .logo-wrapper
+        width: 166px
+        margin-left: 0
+        padding: 0
+        display: flex
+        @include media("<1600px")
+            height: 30px
+            width: 125px
+        @include media("<=desktop")
+            height: 33px
+            width: 140px
+        @include media("<tablet")
+            height: 25px
+            width: 102px
+    .logo-svg
+        height: 100%
+        width: 100%
+        path:nth-child(1),
+        path:nth-child(3),
+        path:nth-child(4)
+            fill: $white
+        path:nth-child(2)
+            fill: #000
+        @include media("<=1200px")
+            path:nth-child(1),
+            path:nth-child(3),
+            path:nth-child(4)
+                fill: #000
+            path:nth-child(2)
+                fill: $blue-primary
+    .menu__list
+        @extend %flex-row-center
+        &--item
+            margin-left: 1px
+            @include media("<=desktop")
+                margin-left: 4px
+        &--link
+            color: $white
+            font-size: 21px
+            line-height: 1.25
+            padding: 11px 19px
+            border: 1px solid transparent
+            @include media("<1600px")
+                font-size: 18px
+                padding: 8px 13px
+    .menu__list--primary
+        margin-right: 27px
+        .menu__list--link:hover
+            background: rgba(255,255,255,.05)
+            border: 1px solid #fff
+            border-radius: 3px
+    .menu__list--secondary
+        .menu__list--link:hover
+            opacity: .7
+    .language-block
+        position: relative
+        .language-desktop__current::after
+            content: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8862 1.67633C11.9621 1.59903 12 1.50242 12 1.39614C12 1.28986 11.9621 1.19324 11.8862 1.11594C11.7345 0.961353 11.4879 0.961353 11.3362 1.11594L6.5 6.04348L1.66379 1.11594C1.51207 0.961353 1.26552 0.961353 1.11379 1.11594C0.962069 1.27053 0.962069 1.52174 1.11379 1.67633L6.225 6.88406C6.37672 7.03865 6.62328 7.03865 6.775 6.88406L11.8862 1.67633Z' fill='white' stroke='white'/%3E%3C/svg%3E%0A")
+            display: block
+            position: absolute
+            padding-left: 32px
+            top: -2px
+            @include media("<1600px")
+                padding-left: 26px
+                top: 0
+        a
+            padding-left: 0
+    .search-block 
+        svg path
+            fill: $white
+        .search__icon--cross
+            display: none
+        .float-search__icon
+            width: 30px
+            height: 30px
+            @include media("<1600px")
+                width: 21px
+                height: 21px
+        @include media("<=1200px")
+            display: none
+    a.float-search
+        padding: 0 0 0 27px
+        display: flex
+    .no-list-style
+        display: none
+
+    
+/* HEADER ON SCROLL */
+
+.overflow-hidden
+    overflow: hidden
+.menu--onscroll
+    box-shadow: 0 5px 13px rgba(56,87,140,.2)
+    background-color: $white
+    transition: .5s
+    @include media(">1200px")
+        padding-bottom: 15px
+        .header__inner
+            padding: 20px 0 5px
+    .menu__list--link
+        color: $blue-primary
+        border: 1px solid transparent
+        &:not(.language-desktop):not(.float-search):hover
+            border-color: transparent
+    .language-desktop__current::after
+        content: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.8862 1.67633C11.9621 1.59903 12 1.50242 12 1.39614C12 1.28986 11.9621 1.19324 11.8862 1.11594C11.7345 0.961353 11.4879 0.961353 11.3362 1.11594L6.5 6.04348L1.66379 1.11594C1.51207 0.961353 1.26552 0.961353 1.11379 1.11594C0.962069 1.27053 0.962069 1.52174 1.11379 1.67633L6.225 6.88406C6.37672 7.03865 6.62328 7.03865 6.775 6.88406L11.8862 1.67633Z' fill='%231c85c8' stroke='%231c85c8'/%3E%3C/svg%3E%0A") !important
+    .search-block 
+        svg path
+            fill: $blue-primary
+.logo-svg--inverse
+    path:nth-child(1),
+    path:nth-child(3),
+    path:nth-child(4)
+        fill: #000 !important
+    path:nth-child(2)
+        fill: $blue-primary !important
+
+
+/* SUBMENU */
+
+.menu
+    @include media(">1200px")
+        ul
+            list-style: none
+        ul.submenu__list
+            min-width: 285px
+            margin-top: 21px
+            padding: 8px 0
+            background: $white
+            color: $blue-primary
+            box-shadow: 5px 4px 8px -2px rgba(56,87,140,.2)
+            &::before
+                margin-top: -21px
+                content: ""
+                display: block
+                height: 21px
+                @include media("<1600px")
+                    margin-top: -26px
+                    height: 26px
+            li
+                padding: 10px 20px
+            a:not(:only-child)
+                display: flex
+                justify-content: space-between
+            a:not(:only-child)::after
+                content: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.67633 1.11379C1.59903 1.03793 1.50242 1 1.39614 1C1.28986 1 1.19324 1.03793 1.11594 1.11379C0.961353 1.26552 0.961353 1.51207 1.11594 1.66379L6.04348 6.5L1.11594 11.3362C0.961353 11.4879 0.961353 11.7345 1.11594 11.8862C1.27053 12.0379 1.52174 12.0379 1.67633 11.8862L6.88406 6.775C7.03865 6.62328 7.03865 6.37672 6.88406 6.225L1.67633 1.11379V1.11379Z' fill='%231c85c8' stroke='%231c85c8'/%3E%3C/svg%3E%0A")
+            a:hover
+                opacity: .7       
+        ul li 
+            position: relative
+            list-style-type: none
+        ul ul,
+        .language-block ul
+            display: none
+            position: absolute
+            background-color: #f5f5f5
+            color: $blue-primary
+            border-top: 2px solid $blue-primary
+            min-width: 285px
+            padding: 8px 0
+            box-shadow: 5px 4px 8px -2px rgba(56,87,140,.2)
+        & > ul 
+            display: block
+        & > ul > li ul
+            top: 100%
+            left: 0
+        & > ul > li ul ul
+            top: -10px
+            left: 100%
+        & > ul > li:hover > ul,
+        & > ul > li li:hover > ul
+            display: inherit
+.language-block
+    ul.submenu__list
+        min-width: 0
+        padding: 0
+        a
+            padding: 0
+        li
+            padding: 10px 17px
+            &:hover
+                background-color: $blue-primary
+                a
+                    opacity: 1 !important
+                    color: $white    
+    .language-desktop__list--item-link
+        color: $blue-primary
+    & > ul > li ul
+        top: 100%
+        left: 0
+    &:hover ul
+        display: inherit
+
+
+/* COMMON BLOCKS */
+
+.content-area
+    padding: 90px 15px
+    @include media("<desktop")
+        padding: 70px 24px
+    @include media("<tablet")
+        padding: 50px 24px
+.content-layout
+    display: flex
+    flex-wrap: wrap
+.content-layout__main
+    width: 75%
+    padding-right: 60px
+    @include media("<1600px")
+        padding-right: 30px
+    @include media("<=992px")
+        width: 100%
+        padding-right: 0
+.content-layout__aside
+    width: 25%
+    @include media("<=992px")
+        width: 100%
+.blog-widget-area
+    position: sticky
+    top: 100px
+
+
+    
+/* HERO */
+    
+.hero
+    background: linear-gradient(90deg,#1E87C9 0%,#49AFEF 100%)
+    background-position: 75% center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    background-image: url(../images/bg_kv_1.jpg)
+    @include media("<=992px")
+        background-position: center
+    &::after
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        z-index: 1
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,.6)
+        z-index: 0
+    .container
+        position: relative
+        z-index: 1
+    &__inner
+        padding: 110px 0 90px
+        @include media("<tablet")
+            padding: 125px 24px 65px
+    .breadcrumbs-wrapper 
+        margin-bottom: 80px
+        display: block
+        color: $white
+        a 
+            text-decoration: underline
+            font-size: 14px
+            line-height: 1.357
+            &:last-child
+                text-decoration: none
+    &__content
+        max-width: 800px
+        color: $white
+        &--date
+            margin-bottom: 9px
+        &--category 
+            a
+                text-decoration: underline
+                &:hover
+                    opacity: .7
+        @include media("<=992px")
+            text-align: center
+    h1
+        margin-bottom: 17px
+
+
+
+/* BLOG POST */
+
+.blog-post__content
+    h2
+        margin-bottom: 8px
+    h3
+        margin-bottom: 0.5rem
+    p
+        margin-bottom: 16px
+        color: #808080
+    li
+        color: #808080
+    b, strong 
+        font-weight: bolder
+    img
+        width: 100%
+        height: auto
+    ul:not(.blog-post__nav)
+        margin-bottom: 1rem
+        padding-left: 40px
+    li 
+        list-style: disc
+        &::marker 
+            unicode-bidi: isolate
+            font-variant-numeric: tabular-nums
+            text-transform: none
+            text-indent: 0px !important
+            text-align: start !important
+            text-align-last: start !important
+    a:not(.blog-post__nav__link)
+        color: $blue-primary
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+.blog-post__nav
+    margin-bottom: 10px
+    margin-left: 20px
+    li
+        list-style-type: disc
+        color: #428bca
+        padding: 7px 30px 7px 0px
+    a
+        line-height: 1.45
+        font-weight: 400
+.blog-post__footer
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 70px
+    @include media("<992px")
+        margin-bottom: 45px
+    @include media("<desktop")
+        margin-top: 30px
+.blog-post__sharing
+    display: flex
+    gap: 10px
+    a[title="Facebook"]
+        @extend %social-icon
+        border-color: #3e5b98
+        svg path
+            fill: #3e5b98
+    a[title="Twitter"]
+        @extend %social-icon
+        border-color: #4da7de
+        svg path
+            fill: #4da7de
+    a[title="LinkedIn"]
+        @extend %social-icon
+        border-color: #3371b7
+        svg path
+            fill: #3371b7
+
+
+/* ASIDE WIDGETS*/
+
+.blog-widget
+    @extend %blog-widget
+    img
+        max-width: 100%
+    @include media("<desktop")
+        padding: 22px 24px
+
+/* AUTHOR */
+.author-widget
+    &__head
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 15px
+    &__heading
+        display: block
+        margin: 3px 10px 10px 0
+        font-size: 20px
+        line-height: 1.25
+        font-weight: 600
+        color: #454545
+    .author-socials__link
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 28px
+        height: 28px
+        border: 1px solid #d9d9d9
+        border-radius: 3px
+        transition: border-color 0.2s ease
+        &:hover
+            border-color: $blue-primary
+    &__info 
+        display: flex
+        align-items: center
+        margin: 0 0 20px
+        @include media(">=992px", "<1600px")
+            flex-direction: column
+            text-align: center
+    &__photo 
+        margin-right: 20px
+        @include media(">=992px", "<1600px")
+            margin: 0 0 10px
+    &__img 
+        overflow: hidden
+        display: block
+        margin: 0 auto
+        width: 120px
+        min-width: 120px
+        height: 120px
+        object-fit: cover
+        border-radius: 50%
+        background-color: #eee
+    &__name
+        display: block
+        margin: 6px 0 8px
+        font-size: 18px
+        line-height: 1.3
+        font-weight: 600
+        font-family: 'Montserrat',sans-serif
+        color: #454545
+    .author-pageurl__link
+        font-size: 20px
+        color: $blue-primary
+        @include media("<desktop")
+            font-size: 18px
+            line-height: 1.556px
+    &__title
+        display: block   
+        line-height: 1.3
+        color: #686868
+        @include media("<desktop")
+            font-size: 16px
+    &__description
+        color: #686868
+        @include media("<desktop")
+            font-size: 16px
+
+/* CATEGORIES */
+.categories-widget
+    padding-bottom: 0
+    transition: all 0.4s ease
+    &__head
+        display: flex
+        justify-content: space-between
+        cursor: pointer
+        padding-bottom: 26px
+        @include media("<desktop")
+            padding-bottom: 22px
+    &__heading
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__body
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.4s ease-out
+    .cats-list
+        display: flex
+        flex-direction: column
+    .cats-list a 
+        padding: 13px 0
+        color: #686868
+        border-top: 1px solid #9d9d9d
+        @include media("<desktop")
+            padding: 10px 0
+            font-size: 16px
+        &:last-child
+            margin-bottom: 26px
+            @include media("<desktop")
+                margin-bottom: 22px
+        &:hover
+            color: $blue-primary
+.accordion__arrow
+    display: block
+    margin-right: -11px
+    width: 30px
+    height: 30px
+    transform: rotate(90deg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 8px 13px
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.67633 1.11379C1.59903 1.03793 1.50242 1 1.39614 1C1.28986 1 1.19324 1.03793 1.11594 1.11379C0.961353 1.26552 0.961353 1.51207 1.11594 1.66379L6.04348 6.5L1.11594 11.3362C0.961353 11.4879 0.961353 11.7345 1.11594 11.8862C1.27053 12.0379 1.52174 12.0379 1.67633 11.8862L6.88406 6.775C7.03865 6.62328 7.03865 6.37672 6.88406 6.225L1.67633 1.11379V1.11379Z' fill='%23454545' stroke='%23454545'/%3E%3C/svg%3E%0A")
+    transition: transform 0.2s ease-out
+.accordion.active .accordion__arrow,
+.accordion__arrow.accordion.active
+    transform: rotate(0deg)
+
+/* BANNER SLIDER */
+.blog-banner-widget
+    position: relative
+    background-color: $blue-primary
+    padding: 0
+.blog-banner__content
+    padding: 27px 32px 0
+    @include media("<desktop")
+        padding: 20px 24px 0
+    @include media("<=992px")
+        max-width: 290px
+        padding: 50px 0 0 26px
+    @include media("<tablet")
+        padding: 26px 26px 0
+        max-width: calc(100%)
+.blog-banner__item
+    color: $white
+    height: 530px
+    display: flex!important
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    @include media("<desktop")
+        height: 431px
+    @include media("<=992px")
+        height: 291px
+    @include media("<tablet")
+        height: 441px
+        justify-content: flex-start
+.blog-banner__heading
+    margin-bottom: 22px
+    @include media("<desktop")
+        font-size: 18px
+        margin-bottom: 18px
+.blog-banner__text
+    @include media("<desktop")
+        font-size: 16px
+.blog-banner__link
+    position: absolute
+    z-index: 2
+    color: $blue-primary
+    bottom: 23px
+    right: 56px
+    font-size: 19px
+    letter-spacing: .6px
+    transition: color .3s
+    @include media("<desktop")
+        bottom: 15px
+        right: 45px
+    @include media("<=992px")
+        color: $white
+        bottom: 45px
+        right: 0
+        left: 25px
+    @include media("<tablet")
+        position: relative
+        bottom: 0
+        left: 0
+        padding: 26px 26px 0
+    a:after 
+        position: absolute
+        content: ''
+        color: $blue-primary
+        font-size: 16px
+        right: -25px
+        top: 16%
+        display: inline-block
+        background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.8048 9.36241C17.9153 9.25187 17.9705 9.10731 17.9705 8.96247C17.9705 8.81791 17.9153 8.67334 17.8048 8.56253L11.8313 2.58963C11.6103 2.36884 11.2522 2.36884 11.0315 2.58963C10.8107 2.81069 10.8107 3.16872 11.0315 3.3895L16.0394 8.39687H0.632244C0.320057 8.39687 0.0666504 8.64972 0.0666504 8.96247C0.0666504 9.27522 0.319775 9.52806 0.632244 9.52806H16.0394L11.0315 14.5366C10.8107 14.7573 10.8107 15.1154 11.0315 15.3362C11.2522 15.5572 11.6103 15.5572 11.8313 15.3362L17.8048 9.36241Z' fill='%231C85C8'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        height: 18px
+        width: 18px
+        transition: all 0.3s
+        @include media("<=992px")
+            position: relative
+            color: $white
+            background: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.8048 9.36241C17.9153 9.25187 17.9705 9.10731 17.9705 8.96247C17.9705 8.81791 17.9153 8.67334 17.8048 8.56253L11.8313 2.58963C11.6103 2.36884 11.2522 2.36884 11.0315 2.58963C10.8107 2.81069 10.8107 3.16872 11.0315 3.3895L16.0394 8.39687H0.632244C0.320057 8.39687 0.0666504 8.64972 0.0666504 8.96247C0.0666504 9.27522 0.319775 9.52806 0.632244 9.52806H16.0394L11.0315 14.5366C10.8107 14.7573 10.8107 15.1154 11.0315 15.3362C11.2522 15.5572 11.6103 15.5572 11.8313 15.3362L17.8048 9.36241Z' fill='white'/%3E%3C/svg%3E")
+            right: -10px
+            top: 3px
+    &:hover
+        opacity: .7
+        transition: all 0.3s
+.blog-banner-widget img
+    max-width: 100%
+    bottom: 0
+    position: absolute
+    border-radius: 0 0 10px 10px
+.blog-banner__img
+    display: block 
+    @include media("<=992px")
+        display: none !important
+.blog-banner__img--tab
+    display: none !important
+    @include media("<=992px")
+        display: block !important
+        position: absolute
+        right: 0
+        bottom: 0
+
+/* SEARCH */
+.search-widget
+    .blog-search
+        display: flex
+        align-items: center
+    .blog-search__input 
+        display: block
+        width: calc(100% - 46px)
+        height: auto!important
+        margin-right: 20px
+        padding: 4px 0
+        color: #454545
+        background-color: transparent
+        font-size: 14px
+        line-height: 1.3
+        font-family: inherit
+        border: none
+        border-bottom: 1px solid #686868
+        border-radius: 0
+        outline: 0
+    .blog-search__btn
+        background-position: top 0 right 0 !important
+        background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(https://scand.com/wp-content/themes/bb-theme-child/%23clip0)'%3E%3Cpath d='M23.7438 22.5907L16.5847 15.4317C17.9564 13.7953 18.79 11.701 18.79 9.43765C18.79 4.31306 14.5195 0.0426025 9.39496 0.0426025C4.27036 0.0426025 0 4.31316 0 9.43775C0 14.5623 4.27046 18.8328 9.39505 18.8328C11.6156 18.8328 13.6724 18.0299 15.2951 16.7044L22.3772 23.7865C22.5481 23.9573 22.7189 23.9573 23.0605 23.9573C23.4021 23.9573 23.5729 23.9573 23.7437 23.7865C24.0855 23.4449 24.0855 22.9325 23.7438 22.5907ZM9.39505 17.1246C5.12459 17.1246 1.70826 13.7083 1.70826 9.43785C1.70826 5.16739 5.12459 1.75106 9.39505 1.75106C13.6655 1.75106 17.0818 5.16739 17.0818 9.43785C17.0818 13.7083 13.6655 17.1246 9.39505 17.1246Z' fill='%231C85C8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") bottom 10px right 10px no-repeat
+        border: 0
+        flex-shrink: 0
+        display: block
+        width: 24px
+        height: 24px
+        text-indent: -9999px
+
+
+/* OTHER POSTS (WITH SLIDER) */
+
+.other-posts
+    padding-bottom: 70px
+    .btn-contact
+        width: fit-content
+        margin: 50px auto 0
+    > .container
+        @include media(">1200px")
+            max-width: 100%
+    &__slider
+        @include media(">1200px")
+            margin: 0 -85px 26px
+    .other-posts__header.content-area
+        padding: 0 24px 30px
+        @include media("<=600px")
+            padding: 50px 24px 30px
+    h2
+        font-weight: 700
+        font-size: 42px
+        line-height: 1.214
+        @include media("<=phone")
+            font-size: 28px
+.slick-dots
+    @extend %flex-row-center
+    gap: 20px
+    margin-top: 32px
+    @include media("<=desktop")
+        margin-top: 20px
+    @include media("<=tablet")
+        margin-top: 24px
+    li button
+        font-size: 0
+        line-height: 0
+        display: block
+        width: 10px
+        height: 10px
+        cursor: pointer
+        color: transparent
+        border: 2px solid #1C85C8
+        border-radius: 100%
+        outline: none
+    li.slick-active button
+        background: $blue-primary
+.slick-arrow
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    width: 30px
+    height: 30px
+    background-color: transparent
+    border: 0
+.slick-prev
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.005 1.003a.824.824 0 0 0-.6-.253.824.824 0 0 0-.598.253l.179.175-.18-.175-7.81 7.99a.868.868 0 0 0 0 1.21l7.81 7.99a.835.835 0 0 0 1.199 0 .868.868 0 0 0 0-1.209l-7.22-7.386 7.22-7.385a.868.868 0 0 0 0-1.21z' fill='%231c85c8' stroke-width='.5'%3E%3C/path%3E %3C/svg%3E")
+    background-repeat: no-repeat
+    bottom: -15px
+    left: -170px
+.slick-next
+    background-image: url("data:image/svg+xml,%3Csvg width='11' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.005 1.003a.824.824 0 0 0-.6-.253.824.824 0 0 0-.598.253l.179.175-.18-.175-7.81 7.99a.868.868 0 0 0 0 1.21l7.81 7.99a.835.835 0 0 0 1.199 0 .868.868 0 0 0 0-1.209l-7.22-7.386 7.22-7.385a.868.868 0 0 0 0-1.21z' fill='%231c85c8' stroke-width='.5'%3E%3C/path%3E %3C/svg%3E")
+    background-repeat: no-repeat
+    bottom: -5px
+    right: -170px
+    transform: rotate(180deg)
+.slider__item
+    position: relative
+    margin: 0 15px
+    img 
+        width: 100%
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg,rgba(2,0,20,.375) 0%,rgba(2,0,20,.75) 100%)
+        border-radius: 10px
+        opacity: .9
+        transition: opacity 0.4s
+        z-index: 2
+    .project-card__text
+        position: absolute
+        bottom: 18px
+        color: $white
+        z-index: 5
+        padding: 0 30px
+    .project-card__tags
+        margin-bottom: 28px
+    .project-card__tags--item
+        display: inline-block
+        margin: 10px 10px 0 0
+        font-size: 14px
+        line-height: 1.357
+        padding: 6px 9px
+        transition: all 0.3s
+        border-radius: 3px
+        text-decoration: underline
+        background: rgba(28,133,200,.85)
+        pointer-events: all
+        &:hover
+            opacity: 1
+            color: rgba(255,255,255,.7)
+            background-color: $blue-primary
+    .projects-card__heading
+        font-size: 20px
+        font-family: 'Montserrat', sans-serif
+
+
+/* FOOTER */
+
+.footer
+    background-color: $blue-primary
+    color: $white   
+    &__menu,
+    &__secondary,
+    &__social
+        display: flex
+        flex-wrap: wrap
+    &__menu
+        gap: 60px
+        justify-content: space-between
+        @include media("<=1024px")
+            gap: 24px
+        @include media("<=phone")
+            gap: 20px
+    &__menu--list
+        flex: 1 1 0
+        @include media("<=1024px")
+            flex: auto
+            width: 25%
+        @include media("<=phone")
+            width: calc(50% - 20px)
+    &__menu--item
+        margin-top: 12px
+        @include media("<=1024px")
+            &:not(:first-child)
+                display: none
+    .footer__menu--link
+        font-size: 16px   
+        &:hover
+            opacity: .8 
+    h5
+        @include media(">=desktop")
+            margin-bottom: 8px
+        @include media("<=phone")
+            font-size: 16px
+    &__secondary
+        border-top: 1px solid rgb(255 255 255 / 30%)
+        margin-top: 42px
+        padding-top: 50px
+        justify-content: space-between
+        align-items: center
+        font-size: 14px
+        @include media("<=1200px")
+            align-items: flex-start
+        @include media("<=tablet")
+            margin-top: 64px
+            padding-top: 36px
+        @include media("<=600px")
+            flex-direction: column
+            gap: 24px
+            margin-top: 36px
+            padding-top: 24px
+    &__contacts
+        @include media("<=1200px")
+            order: 1
+    &__social
+        gap: 30px
+        @include media("<=1200px")
+            order: 2
+        @include media("<=1200px", ">600px")
+            margin: 36px auto
+        @include media("<=600px")
+            margin: 45px auto
+            gap: 14px
+            margin: 5px 0
+        a:hover
+            opacity: .8
+    &__copy 
+        display: flex
+        flex-direction: column
+        gap: 30px
+        @include media("<=1200px")
+            gap: 22px
+        p
+            margin-top: 0
+            @include media("<=600px")
+                font-size: 16px
+        div
+            display: flex
+            gap: 30px
+            @include media("<=tablet")
+                flex-direction: column
+                gap: 14px
+    &__docs a
+        font-size: 14px
+        margin-right: 32px
+        text-decoration: underline
+        &:hover
+            opacity: .7
+    &__contacts
+        color: #a4cee9
+        a 
+            color: white
+            &:hover
+                opacity: .7
+        @include media(">600px")
+            text-align: right
+         
+
+/* SCROLL TOP ARROW */
+
+.scroll-top
+    width: 40px
+    height: 40px
+    position: fixed
+    bottom: 40px
+    right: 40px
+    z-index: -1
+    display: inline-block
+    opacity: 0
+    visibility: hidden
+    padding: 9px 10px
+    border-radius: 50%
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,.2)
+    background-color: #fff
+    cursor: pointer
+    transition: all .3s
+    &.is-scrolled
+        z-index: 10
+        opacity: 1
+        visibility: visible
+.scroll-header__icon
+    fill: $blue-primary
+    width: 20px
+    height: 20px
+
+
+/* MOBILE NAVIGATION (BURGER MENU) */
+
+@include media(">1200px")
+    .nav-icon-wrapper,
+    .menu .accordion__arrow,
+    .menu__search-form
+        display: none
+@include media("<=1200px")
+    @import _nav-icon
+    .header--mobile
+        background-color: $white
+        height: 100vh
+        overflow: auto
+        .container
+            padding: 0
+    .header__inner
+        display: block
+        padding: 0
+        & > div
+            position: sticky
+            top: 0
+            display: flex
+            justify-content: space-between
+            padding: 20px
+            z-index: 2
+            background-color: $white
+    .box-shadow 
+        box-shadow: 0 5px 13px rgba(56,87,140,.2)
+        padding: 30px 44px !important
+        @include media("<tablet")
+            padding: 20px !important
+    .menu
+        position: relative
+        display: none
+        max-width: 960px
+        margin: 30px auto
+        padding: 0 30px
+        z-index: 1
+        @include media("<=992px")
+            max-width: 720px
+    .menu__list--primary
+        display: flex
+        flex-direction: column !important
+        margin-right: 0
+        width: 100%
+        margin-top: 30px
+        padding-bottom: 0
+        transition: all 0.4s ease
+        align-items: flex-start !important 
+        .menu__list--item
+            position: relative
+            width: 100%
+        .menu__list--link
+            color: $blue-primary
+            display: flex
+            cursor: pointer
+            font-size: 21px
+            font-weight: 500
+            padding: 7px 0
+        .submenu__list
+            max-height: 0
+            overflow: hidden
+            transition: max-height 0.4s ease-out
+            a
+                display: block
+                padding: 7px 0 8px
+                color: $blue-primary
+                &:hover
+                    cursor: pointer
+                    opacity: .7
+        .accordion__arrow
+            position: absolute
+            right: 0
+            top: 12px
+            display: block
+            margin-right: 0
+            width: 20px
+            height: 20px
+            transform: rotate(90deg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: 17px 17px
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.67633 1.11379C1.59903 1.03793 1.50242 1 1.39614 1C1.28986 1 1.19324 1.03793 1.11594 1.11379C0.961353 1.26552 0.961353 1.51207 1.11594 1.66379L6.04348 6.5L1.11594 11.3362C0.961353 11.4879 0.961353 11.7345 1.11594 11.8862C1.27053 12.0379 1.52174 12.0379 1.67633 11.8862L6.88406 6.775C7.03865 6.62328 7.03865 6.37672 6.88406 6.225L1.67633 1.11379V1.11379Z' fill='%23454545' stroke='%231c85c8'/%3E%3C/svg%3E%0A")
+            transition: transform 0.2s ease-out
+            cursor: pointer
+            &:hover
+                opacity: .7
+    .menu__list--secondary
+        border-top: 1px solid rgba(255, 255, 255, 0.3)
+        display: flex
+        flex-direction: row
+        padding: 0
+        margin: 0
+    .submenu__list,
+    .submenu__list-secondary
+        margin-left: 30px
+        padding: 8px 0  
+    .language-block
+        .language-desktop__list-wrapper,
+        .language-desktop__list
+            display: flex
+            margin-left: 0
+            gap: 20px
+            align-items: center
+            justify-content: center
+            ul li
+                padding: 0
+                &:hover
+                    border-radius: 3px
+        a.menu__list--link
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid $blue-primary
+            border-radius: 3px
+            padding: 0 7px
+            font-family: 'Montserrat', sans-serif
+            font-size: 16px
+            line-height: 1.25
+            width: 35px
+            height: 35px
+            &:hover
+                opacity: 1 !important
+        .language-desktop__current
+            background: $blue-primary
+            &::after
+                display: none !important
+    .menu__search-form
+        display: flex
+        position: relative
+        input
+            width: 100%
+            padding: 10px 30px 7px 10px
+            border: 0
+            border-bottom: 1px solid #1c85c8
+            border-width: 2px
+            color: #1c85c8
+            outline: 0
+            font-size: 16px
+        .search__input
+            line-height: 1.3
+            font-family: inherit
+        .search__btn
+            position: absolute
+            right: 0
+            background-position: top 0 right 0 !important
+            background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(https://scand.com/wp-content/themes/bb-theme-child/%23clip0)'%3E%3Cpath d='M23.7438 22.5907L16.5847 15.4317C17.9564 13.7953 18.79 11.701 18.79 9.43765C18.79 4.31306 14.5195 0.0426025 9.39496 0.0426025C4.27036 0.0426025 0 4.31316 0 9.43775C0 14.5623 4.27046 18.8328 9.39505 18.8328C11.6156 18.8328 13.6724 18.0299 15.2951 16.7044L22.3772 23.7865C22.5481 23.9573 22.7189 23.9573 23.0605 23.9573C23.4021 23.9573 23.5729 23.9573 23.7437 23.7865C24.0855 23.4449 24.0855 22.9325 23.7438 22.5907ZM9.39505 17.1246C5.12459 17.1246 1.70826 13.7083 1.70826 9.43785C1.70826 5.16739 5.12459 1.75106 9.39505 1.75106C13.6655 1.75106 17.0818 5.16739 17.0818 9.43785C17.0818 13.7083 13.6655 17.1246 9.39505 17.1246Z' fill='%231C85C8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") bottom 10px right 10px no-repeat
+            border: 0
+            flex-shrink: 0
+            display: block
+            width: 24px
+            height: 24px
+            text-indent: -9999px

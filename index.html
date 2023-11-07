@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icons/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Scand</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div>
+                        <a href="/" class="logo-wrapper">
+                            <svg width="166" height="40" viewBox="0 0 166 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                                <path d="M111.791 23.0977C111.791 23.8945 111.589 24.6035 111.185 25.2246C110.78 25.8398 110.197 26.3203 109.436 26.666C108.674 27.0059 107.78 27.1758 106.755 27.1758C105.899 27.1758 105.182 27.1172 104.602 27C104.021 26.877 103.418 26.666 102.791 26.3672V23.2734C103.453 23.6133 104.142 23.8799 104.856 24.0732C105.571 24.2607 106.228 24.3545 106.825 24.3545C107.341 24.3545 107.719 24.2666 107.959 24.0908C108.199 23.9092 108.319 23.6777 108.319 23.3965C108.319 23.2207 108.27 23.0684 108.17 22.9395C108.076 22.8047 107.921 22.6699 107.704 22.5352C107.493 22.4004 106.925 22.125 105.999 21.709C105.161 21.3281 104.531 20.959 104.109 20.6016C103.693 20.2441 103.383 19.834 103.178 19.3711C102.979 18.9082 102.879 18.3604 102.879 17.7275C102.879 16.5439 103.31 15.6211 104.171 14.959C105.032 14.2969 106.216 13.9658 107.722 13.9658C109.052 13.9658 110.408 14.2734 111.791 14.8887L110.728 17.5693C109.526 17.0186 108.489 16.7432 107.616 16.7432C107.165 16.7432 106.837 16.8223 106.632 16.9805C106.427 17.1387 106.324 17.335 106.324 17.5693C106.324 17.8213 106.453 18.0469 106.711 18.2461C106.975 18.4453 107.684 18.8086 108.838 19.3359C109.945 19.834 110.713 20.3701 111.141 20.9443C111.574 21.5127 111.791 22.2305 111.791 23.0977ZM119.499 16.8135C118.673 16.8135 118.028 17.1533 117.565 17.833C117.103 18.5068 116.871 19.4385 116.871 20.6279C116.871 23.1006 117.812 24.3369 119.692 24.3369C120.261 24.3369 120.812 24.2578 121.345 24.0996C121.878 23.9414 122.414 23.751 122.953 23.5283V26.4639C121.881 26.9385 120.668 27.1758 119.314 27.1758C117.375 27.1758 115.887 26.6133 114.85 25.4883C113.818 24.3633 113.303 22.7373 113.303 20.6104C113.303 19.2803 113.552 18.1113 114.05 17.1035C114.554 16.0957 115.274 15.3223 116.212 14.7832C117.155 14.2383 118.263 13.9658 119.534 13.9658C120.923 13.9658 122.25 14.2676 123.516 14.8711L122.452 17.6045C121.978 17.3818 121.503 17.1943 121.028 17.042C120.554 16.8896 120.044 16.8135 119.499 16.8135ZM133.351 27L132.718 24.5918H128.543L127.893 27H124.078L128.271 14.0977H132.902L137.147 27H133.351ZM131.997 21.7441L131.443 19.6348C131.314 19.166 131.156 18.5596 130.969 17.8154C130.787 17.0713 130.667 16.5381 130.608 16.2158C130.556 16.5146 130.45 17.0068 130.292 17.6924C130.14 18.3779 129.797 19.7285 129.264 21.7441H131.997ZM150.779 27H146.227L141.533 17.9473H141.454C141.565 19.3711 141.621 20.458 141.621 21.208V27H138.545V14.1504H143.08L147.756 23.0801H147.809C147.727 21.7852 147.686 20.7451 147.686 19.96V14.1504H150.779V27ZM164.464 20.3027C164.464 22.4473 163.872 24.0996 162.688 25.2598C161.511 26.4199 159.853 27 157.714 27H153.557V14.1504H158.004C160.066 14.1504 161.657 14.6777 162.776 15.7324C163.901 16.7871 164.464 18.3105 164.464 20.3027ZM160.86 20.4258C160.86 19.248 160.626 18.375 160.157 17.8066C159.694 17.2383 158.988 16.9541 158.039 16.9541H157.028V24.1523H157.802C158.856 24.1523 159.63 23.8477 160.122 23.2383C160.614 22.623 160.86 21.6855 160.86 20.4258Z"></path>
+                                <path d="M78.6814 20.5002L86.9511 22.7298C86.6425 23.8744 86.255 24.9958 85.7913 26.0858C85.2842 27.2148 84.7127 28.3132 84.0795 29.3755L88.1076 32.1352C88.5971 32.4665 89.2312 32.8276 90 33.2682L84.2373 39.894C83.1859 39.3308 82.0907 38.6804 80.9517 37.9427C79.8128 37.205 78.7997 36.5723 77.9126 36.0444C76.1896 37.2086 74.3082 38.1148 72.3273 38.7345C69.4682 39.5451 66.5082 39.9356 63.5385 39.894C58.3934 39.894 54.5669 38.8228 52.059 36.6805C49.5488 34.5337 48.0605 31.9331 48.2938 28.8819C48.3851 28.0191 48.5343 27.1635 48.7406 26.321C48.7077 26.4502 49.2893 24.7606 49.7262 23.9589C49.9453 23.5349 50.2059 23.1009 50.5082 22.6569C51.8553 20.6063 54.395 19.0393 57.7363 17.6876C56.3301 15.9848 55.3642 14.5061 54.8385 13.2516C54.3205 12.0411 54.0522 10.737 54.05 9.41858C54.0291 8.1258 54.3023 6.84538 54.8485 5.67558C55.3946 4.50577 56.1993 3.47769 57.2008 2.6702C59.2904 0.890067 62.4554 0 66.6959 0C71.0284 0 74.2132 0.842582 76.2502 2.52775C78.2872 4.21291 79.3079 6.24151 79.3123 8.61355C79.3119 9.93463 78.9916 11.2356 78.3792 12.4035C77.8254 13.525 77.0611 14.5274 76.1286 15.3553C74.6212 16.5665 73.0483 17.6925 71.4172 18.7278C73.2745 20.5788 75.2336 22.3231 77.2851 23.9523C77.8395 22.8403 78.3064 21.686 78.6814 20.5002ZM62.5463 23.1075C61.6145 23.7048 60.8464 24.5284 60.3122 25.5027C59.8428 26.1937 59.5898 27.0108 59.5861 27.8483C59.5861 29.127 60.1336 30.2678 61.2288 31.2705C62.324 32.2732 63.763 32.7734 65.546 32.7712C67.4614 32.7712 68.9103 32.2909 71.2956 30.7835C69.0111 29.0166 66.0892 26.4535 62.5299 23.0943L62.5463 23.1075ZM66.3674 13.732C67.5759 13.1123 68.6625 12.276 69.574 11.2639C70.3297 10.3793 70.7042 9.54116 70.7042 8.74938C70.7085 8.35176 70.626 7.95806 70.4624 7.59621C70.2989 7.23437 70.0584 6.91324 69.758 6.65562C69.1272 6.0858 68.2565 5.80089 67.1526 5.80089C66.1775 5.75895 65.2241 6.0984 64.4913 6.74838C64.1701 7.02476 63.9121 7.3681 63.7351 7.75473C63.5581 8.14136 63.4664 8.56209 63.4662 8.98791C63.4662 10.0812 64.4333 11.6625 66.3674 13.732Z"></path>
+                                <path d="M49.7327 23.9788L59.7535 26.6755C59.057 29.6041 58.0516 32.0789 56.5534 34.0434C55.092 35.9762 53.171 37.5064 50.968 38.4927C48.7427 39.4932 45.9171 39.9934 42.4914 39.9934C38.3298 39.9934 34.9293 39.3838 32.2899 38.1647C29.6505 36.9455 27.377 34.7999 25.4692 31.7277C23.5548 28.66 22.5966 24.7297 22.5944 19.9371C22.5944 13.5498 24.2798 8.64118 27.6508 5.21122C31.0217 1.78126 35.789 0.0662842 41.9526 0.0662842C46.7713 0.0662842 50.5628 1.04911 53.327 3.01477C56.0912 4.98042 58.1381 7.99958 59.4677 12.0722L49.0197 14.4178C48.7735 13.5019 48.3854 12.6309 47.8698 11.837C47.2379 10.9502 46.4056 10.2279 45.4418 9.73002C44.444 9.23073 43.3424 8.9786 42.2286 8.99456C39.5476 8.99456 37.4931 10.0812 36.065 12.2545C34.9851 13.8689 34.4452 16.4033 34.4452 19.8576C34.4452 24.1378 35.0892 27.072 36.3771 28.66C37.665 30.2479 39.4764 31.0408 41.8113 31.0386C44.075 31.0386 45.4517 30.376 46.6114 29.0807C47.7712 27.7853 49.7327 23.9788 49.7327 23.9788Z"></path>
+                                <path d="M0 26.5463L11.2792 25.8407C11.5223 27.6893 12.0195 29.0972 12.7708 30.0646C13.993 31.6305 15.7376 32.4135 18.0046 32.4135C19.6966 32.4135 21.001 32.0159 21.9176 31.2109C22.3383 30.88 22.6801 30.4583 22.9177 29.9767C23.1554 29.4951 23.283 28.9659 23.291 28.428C23.28 27.9101 23.1566 27.4009 22.9296 26.9361C22.7025 26.4714 22.3773 26.0624 21.9768 25.738C21.1006 24.9451 19.0779 24.1975 15.9084 23.4951C10.7108 22.3091 7.00471 20.7399 4.79027 18.7875C3.71109 17.8767 2.84938 16.7324 2.26919 15.4396C1.68899 14.1468 1.40525 12.7388 1.43905 11.3202C1.44461 9.31299 2.04155 7.35272 3.15409 5.68826C4.29745 3.92138 6.01577 2.53107 8.30906 1.51732C10.6023 0.503569 13.7466 -0.0022014 17.7418 7.20196e-06C22.6437 7.20196e-06 26.3816 0.918786 28.9552 2.75634C26.4812 4.24384 23.8955 7.7257 22.8836 11.2506C22.4812 10.305 21.8645 9.46758 21.0831 8.80571C20.1533 7.98742 18.2904 7.25195 16.6181 7.25195C15.2382 7.25195 14.1507 7.49711 13.4509 8.0868C13.1246 8.34107 12.8604 8.6674 12.6787 9.0407C12.497 9.41401 12.4026 9.82435 12.4028 10.2402C12.4142 10.564 12.4978 10.8811 12.6474 11.1679C12.797 11.4546 13.0087 11.7037 13.2669 11.8966C13.8254 12.4068 15.1517 12.8817 17.2456 13.3212C22.428 14.4476 26.1395 15.5872 28.3802 16.7401C30.621 17.893 32.2517 19.322 33.2724 21.027C34.2996 22.755 34.8297 24.7372 34.8034 26.7517C34.8159 29.1925 34.1055 31.5816 32.7631 33.6127C31.3699 35.7335 29.3853 37.3911 27.0595 38.3767C24.615 39.4611 21.5354 40.0011 17.8206 39.9967C11.2956 39.9967 6.77691 38.7312 4.26459 36.2001C1.75227 33.669 0.330741 30.4511 0 26.5463Z"></path>
+                            </svg>
+                        </a>
+                        <div class="nav-icon-wrapper">
+                            <div class="nav-icon"></div>
+                        </div>
+                    </div>
+                    <nav class="menu">
+                        <form class="menu__search-form" id="searchformnav" action="/" method="get">
+                            <input class="search__input" type="text" name="s" value="" placeholder="Type your keyword" autocomplete="off"> 
+                            <input class="search__btn" id="searchsubmitbtn" type="submit" value="Search">
+                        </form>
+                        <ul class="menu__list menu__list--primary">
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#services" title="Services">
+                                    Services
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/services/web-application-development/">Web App Development</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/front-end-development-services/">Front-end Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/web-application-development/back-end-development/">Back-end Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/web-application-development/progressive-web-app-development/">PWA Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/web-application-development/single-page-web-app-development/">SPA Development</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/services/desktop-custom-software-development/">Desktop App Development</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/desktop-custom-software-development/microsoft-office-extensions/">Microsoft Add-ins</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/services/mobile-app-development/">Mobile App Development</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/mobile-app-development/ios-app-development-services/">iOS App Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/mobile-app-development/android-application-development-services/">Android App Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/mobile-app-development/cross-platform-app-development/">Cross-platform App Development</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/services/mobile-app-development/hybrid-app-development/">Hybrid App Development</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/cloud-application-development/">Cloud Application Development</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/it-staff-augmentation/">Staff Augmentation Services</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/it-outsourcing/">IT Outsourcing Services</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/embedded-software-development/">Embedded Software Development</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/ui-ux-design-and-development-services/">UX/UI Services</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/devops/">DevOps Services</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/services/software-testing/">QA Services</a></li>
+                                </ul> <!-- submenu ends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#technologies" title="Technologies">
+                                    Technologies
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/net/">.NET</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/java/">Java</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/c-plus-plus-development/">C/C++</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/php/">PHP</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/javascript/">JavaScript</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/react/">React.js</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/node-js-development-company/">Node.js</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/angular/">Angular</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/technologies/python/">Python</a>
+                                    </li>
+                                </ul> <!-- submenuends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#industries" title="Industries">
+                                    Industries
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/e-commerce/">E-commerce</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/energy-and-utilities/">Energy & Utilities</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/healthcare/">Healthcare</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/logistics/">Logistics</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/banking-and-finance/">Banking & Finance</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/fintech-development/">FinTech</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/blockchain/">Blockchain</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/telecom-software-development/">Telecom</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/education/">Education</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/iot/">IoT</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/advertising/">Advertising</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/media-and-entertainment/">Media & Entertainment</a>
+                                    </li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/industries/gambling-and-gaming/">Gambling & Gaming</a>
+                                    </li>
+                                </ul> <!-- submenuends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#expertise" title="Expertise">
+                                    Expertise
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/custom-crm-development-services/">CRM</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/custom-erp-software-development/">ERP</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/big-data-solutions-development/">Big Data</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/custom-erp-software-development/human-resource-management-software-development/">HRM</a></li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/services/web-application-development/">Digital Publishing</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/expertise/drm-solutions-development/">Digital Rights Management</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/cad-software-development/">CAD Software Development</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/expertise/ar-vr/">Augmented and Virtual Reality</a></li>
+                                </ul> <!-- submenu ends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#portfolio" title="Portfolio">
+                                    Portfolio
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/products/">Products</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/products/archived-products/">Archived Products</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/portfolio/case-studies/">Case Studies</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/portfolio/research-and-development/">R&D Works</a></li>
+                                </ul> <!-- submenu ends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#company" title="Company">
+                                    Company
+                                </a>
+                                <span class="accordion__arrow accordion"></span>
+                                <ul class="submenu__list"> <!-- submenu starts -->
+                                    <li class="submenu__list--item"><a href="https://scand.com/company/about/">About Us</a></li>
+                                    <li class="submenu__list--item">
+                                        <a href="https://scand.com/company/engagement-models/">Engagement Models</a>
+                                        <ul class="submenu__list-secondary">
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/company/engagement-models/outstaffing/">Outstaffing Model</a>
+                                            </li>
+                                            <li class="submenu__list-secondary--item">
+                                                <a href="https://scand.com/company/engagement-models/dedicated-team/">Dedicated Team</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/company/people/">People</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/company/hiring/">Careers</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/company/blog/">Blog</a></li>
+                                    <li class="submenu__list--item"><a href="https://scand.com/company/news/">News</a></li>
+                                </ul> <!-- submenu ends -->
+                            </li>
+                            <li class="menu__list--item">
+                                <a class="menu__list--link" href="#contact" title="Contact us">Contact us</a>
+                            </li>
+                        </ul>
+                        <div class="menu__list menu__list--secondary">
+                            <div class="menu__list--item language-block">
+                                <div class="language-desktop__list-wrapper">
+                                    <a href="" class="language-desktop__current menu__list--link">En</a>
+                                    <ul class="language-desktop__list no-list-style submenu__list">
+                                        <li><a href="https://scand.com/ru/" class="menu__list--link language-desktop__list--item-link">Ru</a></li>
+                                        <li><a href="https://scand.de/" class="menu__list--link language-desktop__list--item-link">De</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="menu__list--item search-block">
+                                <a class="menu__list--link float-search" href="#" title="Search">
+                                    <svg class="float-search__icon search__icon--magnifier" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+                                        <path d="M21.4802 20.2401L15.1134 13.8734C16.3333 12.4181 17.0746 10.5556 17.0746 8.54273C17.0746 3.98532 13.2768 0.1875 8.71941 0.1875C4.16199 0.1875 0.364258 3.98541 0.364258 8.54282C0.364258 13.1002 4.16208 16.8981 8.71949 16.8981C10.6943 16.8981 12.5234 16.184 13.9666 15.0052L20.2649 21.3035C20.4168 21.4554 20.5687 21.4554 20.8725 21.4554C21.1763 21.4554 21.3282 21.4554 21.4801 21.3035C21.7841 20.9997 21.7841 20.544 21.4802 20.2401ZM8.71949 15.3789C4.92168 15.3789 1.88346 12.3407 1.88346 8.54291C1.88346 4.74509 4.92168 1.70687 8.71949 1.70687C12.5173 1.70687 15.5555 4.74509 15.5555 8.54291C15.5555 12.3407 12.5173 15.3789 8.71949 15.3789Z"></path>
+                                    </svg>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <div class="breadcrumbs-wrapper">
+                            <span>
+                                <a href="https://scand.com/">Home</a> /
+                                <a href="https://scand.com/company/blog/">Corporate Blog</a> /
+                                <a aria-current="page">Key Facts About Implementing IoT in The
+                                    Transportation industry</a>
+                            </span>
+                        </div>
+                        <div class="hero__content">
+                            <h1>Key Facts About Implementing IoT in The Transportation Industry</h1>
+                            <p class="hero__content--date">Published: June 1, 2023</p>
+                            <p class="hero__content--category">Categories: 
+                                <a href="https://scand.com/company/blog/category/expertise/">Expertise</a>, 
+                                <a href="https://scand.com/company/blog/category/expertise/">Industries</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content-area content-area--blog">
+                <div class="container">
+                    <div class="content-layout">
+                        <section class="content-layout__main">
+                            <div class="blog-post__content">
+                                <h3 class="blog-post__nav__title">Post navigation</h3>
+                                <ul class="blog-post__nav">
+                                    <li><a class="blog-post__nav__link" href="#id1">Role of IoT in transportation</a></li>
+                                    <li><a class="blog-post__nav__link" href="#id2">How IoT is improving the transportation industry</a></li>
+                                    <li><a class="blog-post__nav__link" href="#id3">IoT in smart traffic management system: How does it work?</a></li>
+                                    <li><a class="blog-post__nav__link" href="#id4">What to expect in the future?</a></li>
+                                    <li><a class="blog-post__nav__link" href="#id5">Bottom line</a></li>
+                                </ul>
+                                <p>Internet of Things (IoT) technology has made significant advancements and is
+                                    being successfully implemented across various industries.</p>
+                                <p>According to <a
+                                        href="https://www.statista.com/statistics/1194709/iot-revenue-worldwide/">Statista</a>,
+                                    the total Internet of Things (IoT) market worldwide was worth around $251
+                                    billion in 2022 and is forecast to rise to more than $621 billion in 2030.</p>
+                                <p>With such growth, numerous industries, including healthcare, power engineering,
+                                    and transportation, have embraced IoT to enhance their operations.</p>
+                                <h2 id="id1">Role of IoT in transportation</h2>
+                                <p>The Internet of Things (IoT) plays a crucial role in transforming the
+                                    transportation industry by enabling intelligent data exchange between vehicles,
+                                    infrastructure, and various stakeholders.</p>
+                                <p><img class="aligncenter wp-image-39333 size-full"
+                                        src="https://scand.com/wp-content/uploads/2023/06/body_1_Role.jpg" alt=""
+                                        width="1110" height="300"
+                                        srcset="https://scand.com/wp-content/uploads/2023/06/body_1_Role.jpg 1110w, https://scand.com/wp-content/uploads/2023/06/body_1_Role-489x132.jpg 489w, https://scand.com/wp-content/uploads/2023/06/body_1_Role-1024x277.jpg 1024w, https://scand.com/wp-content/uploads/2023/06/body_1_Role-768x208.jpg 768w"
+                                        sizes="(max-width: 1110px) 100vw, 1110px"></p>
+                                <p>Here are some key ways in which IoT is revolutionizing transportation:</p>
+                                <ul>
+                                    <li><b>Smart and connected vehicles</b>: IoT enables vehicles to be equipped
+                                        with sensors, communication devices, and embedded systems that collect and
+                                        transmit real-time data. This connectivity allows vehicles to communicate
+                                        with each other and the surrounding infrastructure, improving road safety,
+                                        traffic management, and efficiency.</li>
+                                    <li><b>Intelligent traffic management</b>: IoT helps optimize traffic flow by
+                                        collecting data from various sources, such as GPS devices, traffic sensors,
+                                        and surveillance cameras. This data can be used to monitor traffic
+                                        conditions, identify congestion areas, and improve overall traffic
+                                        management.</li>
+                                    <li><b>Fleet management and logistics</b>: The integration of IoT in <a
+                                            href="/industries/logistics/fleet-management-software/">fleet
+                                            management</a> enables operators to track and manage their vehicles with
+                                        exceptional efficiency. By utilizing sensors and GPS devices, fleet managers
+                                        can receive real-time information on vehicle location, fuel consumption,
+                                        engine performance, and maintenance requirements.</li>
+                                </ul>
+                                <h2 id="id2">How IoT is improving the transportation industry</h2>
+                                <p>The Internet of Things is a mature technology used as the backbone of intelligent
+                                    digital solutions in many industries, including transportation.</p>
+                                <p>For example, FedEx and UPS companies use GPS-enabled IoT apps for delivery
+                                    tracking and fleet management; Tesla, BMW, Audi, and many others manufacture
+                                    IoT-enabled connected cars; Amazon, Maersk Line, DART, and others transform
+                                    their supply chains using the Internet of Things.</p>
+                                <p>There are many more large and small businesses that implement IoT for their
+                                    transportation needs. Let’s have a look at some key examples of how IoT is
+                                    improving the transportation industry.</p>
+                                <h3>Connected cars</h3>
+                                <p>Empowered with IoT technology, vehicles can establish an internet connection with
+                                    each other and road infrastructure.</p>
+                                <p><img class="aligncenter wp-image-39334 size-full"
+                                        src="https://scand.com/wp-content/uploads/2023/06/body_2_Connected_Cars.jpg"
+                                        alt="" width="1110" height="300"
+                                        srcset="https://scand.com/wp-content/uploads/2023/06/body_2_Connected_Cars.jpg 1110w, https://scand.com/wp-content/uploads/2023/06/body_2_Connected_Cars-489x132.jpg 489w, https://scand.com/wp-content/uploads/2023/06/body_2_Connected_Cars-1024x277.jpg 1024w, https://scand.com/wp-content/uploads/2023/06/body_2_Connected_Cars-768x208.jpg 768w"
+                                        sizes="(max-width: 1110px) 100vw, 1110px"></p>
+                                <p>This improved monitoring helps to better arrange passenger and freight
+                                    transportation on the roads, making it much safer and faster. The primary ways
+                                    of using IoT monitoring systems in connected cars include:</p>
+                                <ul>
+                                    <li><b>Driver behavior monitoring</b> and adjustment of driving style to less
+                                        risky</li>
+                                    <li><b>Alerting</b> of overspeeding, braking, etc.</li>
+                                    <li><b>Traffic jam monitoring</b> and route planning through less busy roads
+                                    </li>
+                                    <li><b>Road infrastructure adjustment to the traffic</b>, e.g., adjustment of
+                                        traffic lights, parking times, etc.</li>
+                                    <li><b>Smart emergency assistance</b> for the uninterrupted movement of
+                                        ambulances, police cars, fire engines, etc.</li>
+                                    <li><b>Toll and ticketing</b> when drivers can automatically pay for parking or
+                                        road traveling without the necessity to queue at toll booths on highways
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="blog-post__footer">
+                                <div class="btn-contact">
+                                    <a class="btn" href="/contact-us/">Contact us</a>
+                                </div>
+                                <div class="blog-post__sharing">
+                                    <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fscand.com%2Fcompany%2Fblog%2Fiot-in-transportation%2F&amp;t=Key%20Facts%20About%20Implementing%20IoT%20in%20The%20Transportation%20Industry" title="Facebook">
+                                        <svg width="10" height="24" viewBox="0 0 10 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.64969 23.8716V12.0604H9.60788L10 7.9034H6.64969L6.65466 5.82263C6.65466 4.73839 6.74616 4.15771 8.12971 4.15771H9.97926V0H7.02039C3.46628 0 2.21552 2.01649 2.21552 5.4081V7.90372H0V12.0611H2.21552V23.7042C3.07864 23.8977 3.97095 24 4.88458 24C5.47479 24 6.06438 23.9571 6.64969 23.8716Z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="http://twitter.com/intent/tweet?url=https%3A%2F%2Fscand.com%2Fcompany%2Fblog%2Fiot-in-transportation%2F&amp;text=Key%20Facts%20About%20Implementing%20IoT%20in%20The%20Transportation%20Industry" title="Twitter">
+                                        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.91878 18C15.221 18 19.7613 11.0756 19.7613 5.07096C19.7613 4.87431 19.7573 4.67856 19.7485 4.48362C20.6319 3.84008 21.3943 3.04328 22 2.13057C21.1912 2.49255 20.3209 2.73618 19.4079 2.84602C20.3398 2.28348 21.0553 1.39351 21.3928 0.332685C20.5068 0.861838 19.5374 1.23486 18.5266 1.43568C17.703 0.55242 16.5304 0 15.2319 0C12.7393 0 10.718 2.03499 10.718 4.54343C10.718 4.90005 10.7576 5.24682 10.8351 5.57955C7.08369 5.38951 3.75722 3.58133 1.53097 0.83187C1.13 1.52534 0.919096 2.31348 0.919797 3.1158C0.919797 4.69233 1.71663 6.08404 2.92841 6.89828C2.21163 6.87624 1.51057 6.68132 0.884203 6.32993C0.883533 6.349 0.883533 6.36759 0.883533 6.38798C0.883533 8.58861 2.43936 10.426 4.50468 10.8423C4.11678 10.9487 3.71652 11.0025 3.31449 11.0022C3.02415 11.0022 2.74119 10.9735 2.46619 10.9203C3.04083 12.7258 4.70711 14.0397 6.68268 14.0764C5.1378 15.2954 3.19174 16.0215 1.07666 16.0215C0.716855 16.0218 0.357347 16.0008 0 15.9585C1.99762 17.2476 4.36959 17.9997 6.919 17.9997"/>
+                                        </svg>
+                                    </a>
+                                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fscand.com%2Fcompany%2Fblog%2Fiot-in-transportation%2F&amp;title=Key%20Facts%20About%20Implementing%20IoT%20in%20The%20Transportation%20Industry" title="LinkedIn">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.54007 19.9995V6.50509H0.252711V19.9995H4.54052H4.54007ZM2.39729 4.66297C3.89207 4.66297 4.82267 3.62675 4.82267 2.33178C4.79469 1.00729 3.89207 0 2.42571 0C0.958355 0 0 1.00729 0 2.33166C0 3.62663 0.930264 4.66285 2.3692 4.66285H2.39695L2.39729 4.66297ZM6.91318 19.9995H11.2002V12.4644C11.2002 12.0617 11.2282 11.6578 11.3415 11.3701C11.6512 10.564 12.3567 9.72953 13.5413 9.72953C15.0923 9.72953 15.7131 10.9669 15.7131 12.7812V19.9995H20V12.2622C20 8.11749 17.8852 6.18872 15.0645 6.18872C12.752 6.18872 11.7363 7.54095 11.172 8.46195H11.2005V6.50556H6.91341C6.96937 7.77149 6.91307 20 6.91307 20L6.91318 19.9995Z"/>
+                                        </svg>
+                                    </a>  
+                                </div>
+                            </div>
+                        </section>
+                        <section class="content-layout__aside">
+                            <div class="blog-widget-area">
+                                <div class="blog-widget author-widget">
+                                    <div class="author-widget__head">
+                                        <h3 class="author-widget__heading">Author Bio</h3>
+                                        <div class="author-socials">
+                                            <a class="author-socials__link" href="https://www.linkedin.com/in/scand-victoria/" target="_blank">
+                                                <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.2859 9.10867V14.8569H12.9791V9.49365C12.9791 8.14636 12.5008 7.22688 11.3039 7.22688C10.3901 7.22688 9.84636 7.84654 9.60714 8.44596C9.51991 8.66024 9.49745 8.95851 9.49745 9.25847V14.8569H6.18951C6.18951 14.8569 6.23406 5.77332 6.18951 4.83219H9.49713V6.25315C9.49042 6.26378 9.4817 6.27524 9.47539 6.28554H9.49713V6.25315C9.93658 5.57107 10.7214 4.59669 12.478 4.59669C14.6544 4.59665 16.2859 6.02947 16.2859 9.10867ZM2.72925 -0.000209808C1.59761 -0.000209808 0.857422 0.747811 0.857422 1.73148C0.857422 2.69372 1.5762 3.46444 2.68535 3.46444H2.70744C3.86101 3.46444 4.57842 2.69386 4.57842 1.73148C4.55668 0.747811 3.86101 -0.000209808 2.72925 -0.000209808ZM1.05388 14.8569H4.36057V4.83219H1.05388V14.8569Z" fill="#1C85C8"></path>
+                                                </svg> 
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="author-widget__body">
+                                        <div class="author-widget__info">
+                                            <div class="author-widget__photo"> 
+                                                <img src="https://scand.com/wp-content/uploads/2021/10/author.jpg" alt="photo" class="author-widget__img">
+                                            </div>
+                                            <div class="author-widget__id">
+                                                <span class="author-widget__name"> 
+                                                    <a class="author-pageurl__link" href="/author-victoria-puzhevich/" target="_blank">Victoria Puzhevich</a> 
+                                                </span> 
+                                                <span class="author-widget__title">Lead Business Development Specialist</span>
+                                            </div>
+                                        </div>
+                                        <div class="author-widget__description"> Victoria has over 15 years of
+                                            experience in IT, keeping track of the current and future trends in the
+                                            sphere, sharing expert advice and relevant industry experience.</div>
+                                    </div>
+                                </div>
+                                <div class="blog-widget search-widget">
+                                    <div class="search-widget__head">
+                                        <form class="search-form-blog" id="searchformblog" action="/" method="get">
+                                            <div class="blog-search"> 
+                                                <input class="blog-search__input" type="text" name="s" value="" placeholder="Type your keyword" autocomplete="off"> 
+                                                <input class="blog-search__btn" id="searchsubmitbtn" type="submit" value="Search">
+                                            </div> 
+                                            <input type="hidden" name="post_type" value="blog">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="blog-widget categories-widget">
+                                    <div class="categories-widget__head accordion">
+                                        <h3 class="categories-widget__heading">Categories</h3> 
+                                        <span class="accordion__arrow"></span>
+                                    </div>
+                                    <div class="categories-widget__body">
+                                        <div class="cats-list">
+                                            <a href="https://scand.com/company/blog/category/uncategorized/">General
+                                                <span class="tag-link-count"> (83)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/technologies/">Technologies
+                                                <span class="tag-link-count"> (79)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/web-application-development/">Web Development
+                                                <span class="tag-link-count"> (34)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/mobile-app-development/">Mobile Development
+                                                <span class="tag-link-count"> (61)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/front-end-development/">Front-End Development
+                                                <span class="tag-link-count"> (13)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/desktop-software-development/">Desktop Software Development
+                                                <span class="tag-link-count"> (4)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/cloud-computing/">Cloud Computing
+                                                <span class="tag-link-count"> (7)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/industries/">Industries
+                                                <span class="tag-link-count"> (125)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/expertise/">Expertise
+                                                <span class="tag-link-count"> (68)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/products/">Products
+                                                <span class="tag-link-count"> (34)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/software-testing/">QA Services
+                                                <span class="tag-link-count"> (3)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/devops/">DevOps
+                                                <span class="tag-link-count"> (6)</span>
+                                            </a>
+                                            <a href="https://scand.com/company/blog/category/news-and-events/">News&amp;Events
+                                                <span class="tag-link-count"> (41)</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-widget blog-banner-widget">
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Searching for Remote Front-end Developers?</h3>
+                                            <p class="blog-banner__text">SCAND is here for you to offer a pool of 70+ front end engineers to choose from.</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_1.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_1_tab.svg" alt="Front-end Developers">
+                                    </div>
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Need Mobile Developers?</h3>
+                                            <p class="blog-banner__text">At SCAND you can hire mobile app developers with exceptional experience in native, hybrid, and cross-platform app development.</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_2.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_2_tab.svg" alt="Front-end Developers">
+                                    </div> 
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Looking for Java Developers?</h3>
+                                            <p class="blog-banner__text">SCAND has a team of 50+ Java software engineers to choose from.</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_3.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_3_tab.svg" alt="Front-end Developers">
+                                    </div> 
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Looking for Skilled .NET Developers?</h3>
+                                            <p class="blog-banner__text">At SCAND, we have a pool of .NET software developers to choose from.</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_4.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_4_tab.svg" alt="Front-end Developers">
+                                    </div> 
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Need to Hire Professional Web Developers Fast and Easy?</h3>
+                                            <p class="blog-banner__text">Need to Hire Professional Web Developers Fast and Easy?</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_5.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_5_tab.svg" alt="Front-end Developers">
+                                    </div>
+                                    <div class="blog-banner__item">
+                                        <div class="blog-banner__content">
+                                            <h3 class="blog-banner__heading">Need to Staff Your Team With React Developers?</h3>
+                                            <p class="blog-banner__text">Our team of 25+ React engineers is here at your disposal.</p>
+                                        </div>
+                                        <div class="blog-banner__link">
+                                            <a href="/hire-front-end-developers/">Learn More</a>
+                                        </div> 
+                                        <img class="blog-banner__img" src="./images/banner_6.svg" alt="Front-end Developers">
+                                        <img class="blog-banner__img--tab" src="./images/banner_6_tab.svg" alt="Front-end Developers">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="other-posts">
+                <div class="container">
+                    <div class="other-posts__inner">
+                        <div class="other-posts__header content-area container">
+                            <h2>Other Posts in This Category</h2>
+                        </div>
+                        <div class="other-posts__slider">
+                            <div class="slider__item">
+                                <a href="https://scand.com/company/blog/car-reservation-system-development/"></a>
+                                <div class="projects-card__content">
+                                    <img class="projects-card__image" src="./images/blog-1.jpg" alt="key visual image">
+                                    <div class="project-card__text">
+                                        <div class="project-card__tags">
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/industries/">Industries</a>
+                                        </div>
+                                        <div class="projects-card__heading">DAM Vs. PIM: What’s The Difference?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="https://scand.com/company/blog/car-reservation-system-development/"></a>
+                                <div class="projects-card__content">
+                                    <img class="projects-card__image" src="./images/blog-2.jpg" alt="key visual image">
+                                    <div class="project-card__text">
+                                        <div class="project-card__tags">
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/industries/">Industries</a>
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/technologies/">Technologies</a>
+                                        </div>
+                                        <div class="projects-card__heading">Business Analysis Services: What, When, and Why</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="https://scand.com/company/blog/car-reservation-system-development/"></a>
+                                <div class="projects-card__content">
+                                    <img class="projects-card__image" src="./images/blog-3.jpg" alt="key visual image">
+                                    <div class="project-card__text">
+                                        <div class="project-card__tags">
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/industries/">Industries</a>
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/expertise/">Expertise</a>
+                                        </div>
+                                        <div class="projects-card__heading">How to Develop a Car Reservation System</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="https://scand.com/company/blog/car-reservation-system-development/"></a>
+                                <div class="projects-card__content">
+                                    <img class="projects-card__image" src="./images/blog-4.jpg" alt="key visual image">
+                                    <div class="project-card__text">
+                                        <div class="project-card__tags">
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/industries/">Industries</a>
+                                        </div>
+                                        <div class="projects-card__heading">DAM Vs. PIM: What’s The Difference?</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__item">
+                                <a href="https://scand.com/company/blog/car-reservation-system-development/"></a>
+                                <div class="projects-card__content">
+                                    <img class="projects-card__image" src="./images/blog-1.jpg" alt="key visual image">
+                                    <div class="project-card__text">
+                                        <div class="project-card__tags">
+                                            <a class="project-card__tags--item" href="https://scand.com/company/blog/category/industries/">Industries</a>
+                                        </div>
+                                        <div class="projects-card__heading">DAM Vs. PIM: What’s The Difference?</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="btn-contact">
+                            <a class="btn" href="/contact-us/">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer content-area">
+            <div class="container">
+                <div class="footer__inner">
+                    <nav class="footer__menu">
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Services">Services</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Web app
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Desctop app
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Mobile app
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Cloud app
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Embedded software
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">UX/UI services</a>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">DevOps services</a>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">QA services</a></li>
+                        </ul>
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Expertise">Expertise</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">CRM</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">ERP</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">HRM</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">IoT</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Big data</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Digital publishing</a>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">CAD software
+                                    development</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Augmented and virtual
+                                    reality</a></li>
+                        </ul>
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Industries">Industries</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">E-commerce</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Healthcare</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Logistics</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Banking & Finance</a>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Media &
+                                    Entertainment</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Gambling & Gaming</a>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Telecom</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Education</a></li>
+                        </ul>
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Technologies">Technologies</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Java</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">.NET</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">C/C++</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">PHP</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Python</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">JavaScript</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Vue.js</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Node.js</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Angular</a></li>
+                        </ul>
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Portfolio">Portfolio</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Case studies</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Products</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">R&D works</a></li>
+                        </ul>
+                        <ul class="footer__menu--list">
+                            <li class="footer__menu--item">
+                                <h5><a href="#" title="Company">Company</a></h5>
+                            </li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">About us</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Contact us</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Engagement models</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Locations</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">People</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Careers</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">News</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Node.js</a></li>
+                            <li class="footer__menu--item"><a href="#" class="footer__menu--link">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__secondary">
+                        <div class="footer__copy">
+                            <div>
+                                <div class="footer-logo"> <a class="footer-logo-link" href="/"> <svg width="57" height="25" viewBox="0 0 57 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg"> <path d="M49.3563 12.8137L54.5437 14.2073C54.3502 14.9227 54.1071 15.6236 53.8162 16.305C53.4981 17.0106 53.1396 17.6972 52.7424 18.3612L55.2692 20.0861C55.5763 20.2932 55.974 20.5189 56.4563 20.7943L52.8414 24.9358C52.1819 24.5838 51.4949 24.1772 50.7804 23.7161C50.0659 23.255 49.4304 22.8595 48.874 22.5296C47.7931 23.2573 46.613 23.8237 45.3703 24.211C43.5769 24.7177 41.72 24.9618 39.8572 24.9358C36.6297 24.9358 34.2294 24.2662 32.6562 22.9272C31.0816 21.5853 30.148 19.9598 30.2943 18.0527C30.3516 17.5133 30.4452 16.9786 30.5746 16.452C30.554 16.5327 30.9188 15.4767 31.1929 14.9756C31.3303 14.7105 31.4938 14.4392 31.6834 14.1618C32.5284 12.88 34.1215 11.9005 36.2175 11.0557C35.3354 9.99129 34.7295 9.06706 34.3998 8.28294C34.0748 7.52631 33.9065 6.71116 33.9051 5.8871C33.8921 5.07904 34.0634 4.27871 34.406 3.54753C34.7486 2.81634 35.2534 2.17373 35.8816 1.66901C37.1924 0.556337 39.1778 0 41.8378 0C44.5556 0 46.5533 0.526657 47.8311 1.57997C49.1089 2.63328 49.7492 3.90126 49.752 5.38391C49.7517 6.20965 49.5508 7.02284 49.1666 7.75283C48.8193 8.4538 48.3398 9.08039 47.7549 9.59785C46.8093 10.3549 45.8227 11.0587 44.7994 11.7059C45.9645 12.8628 47.1934 13.9531 48.4803 14.9714C48.8281 14.2763 49.121 13.5549 49.3563 12.8137ZM39.2348 14.4434C38.6503 14.8167 38.1685 15.3315 37.8333 15.9405C37.5389 16.3724 37.3802 16.8831 37.3779 17.4066C37.3779 18.2059 37.7214 18.9189 38.4084 19.5457C39.0954 20.1724 39.9981 20.4851 41.1165 20.4837C42.318 20.4837 43.2269 20.1834 44.7232 19.2413C43.2901 18.1369 41.4572 16.5348 39.2245 14.4351L39.2348 14.4434ZM41.6317 8.58319C42.3899 8.19587 43.0715 7.67312 43.6432 7.0405C44.1173 6.48761 44.3522 5.96372 44.3522 5.46881C44.3549 5.22028 44.3031 4.97419 44.2005 4.74802C44.098 4.52185 43.9471 4.32113 43.7586 4.16011C43.3629 3.80394 42.8168 3.62586 42.1243 3.62586C41.5126 3.59964 40.9146 3.81181 40.4549 4.21809C40.2534 4.39084 40.0915 4.60544 39.9805 4.8471C39.8695 5.08877 39.812 5.35174 39.8119 5.6179C39.8119 6.30124 40.4185 7.28968 41.6317 8.58319Z" fill="#343434"></path> <path d="M31.197 14.9876L37.483 16.6732C37.046 18.5037 36.4154 20.0505 35.4756 21.2785C34.5588 22.4866 33.3538 23.443 31.9719 24.0595C30.5759 24.6848 28.8035 24.9975 26.6546 24.9975C24.044 24.9975 21.9109 24.6165 20.2553 23.8545C18.5996 23.0924 17.1734 21.7513 15.9767 19.831C14.7758 17.9135 14.1747 15.4569 14.1733 12.4613C14.1733 8.4689 15.2306 5.40077 17.3452 3.25687C19.4597 1.11297 22.4502 0.0410156 26.3166 0.0410156C29.3394 0.0410156 31.7177 0.655334 33.4517 1.88397C35.1857 3.11261 36.4696 4.99973 37.3037 7.54536L30.7498 9.01144C30.5953 8.43895 30.3518 7.89455 30.0284 7.39833C29.632 6.84403 29.1099 6.39257 28.5054 6.08135C27.8794 5.76926 27.1884 5.61167 26.4897 5.62164C24.808 5.62164 23.5192 6.30085 22.6233 7.65925C21.946 8.66839 21.6073 10.2525 21.6073 12.4116C21.6073 15.087 22.0112 16.921 22.8191 17.9135C23.627 18.9061 24.7633 19.4017 26.228 19.4003C27.648 19.4003 28.5115 18.9862 29.2391 18.1765C29.9666 17.3669 31.197 14.9876 31.197 14.9876Z" fill="white"></path> <path d="M0 16.5928L7.07532 16.1517C7.22783 17.3072 7.53973 18.1873 8.011 18.7919C8.77768 19.7707 9.87206 20.2601 11.2941 20.2601C12.3555 20.2601 13.1737 20.0116 13.7488 19.5084C14.0126 19.3016 14.227 19.038 14.3761 18.737C14.5252 18.436 14.6052 18.1052 14.6102 17.769C14.6033 17.4452 14.526 17.1269 14.3835 16.8365C14.2411 16.546 14.0371 16.2903 13.7858 16.0875C13.2363 15.5919 11.9674 15.1247 9.97923 14.6857C6.71877 13.9443 4.39399 12.9635 3.0049 11.7431C2.32794 11.1739 1.78739 10.4586 1.42344 9.65056C1.05949 8.8425 0.881503 7.9624 0.902706 7.0757C0.906192 5.8211 1.28065 4.59583 1.97853 3.55546C2.69575 2.45106 3.77364 1.58205 5.2122 0.948401C6.65076 0.314756 8.62311 -0.00137599 11.1293 4.5016e-06C14.2042 4.5016e-06 16.5489 0.574288 18.1634 1.72286C16.6114 2.65262 14.9895 4.82896 14.3547 7.03222C14.1023 6.44113 13.7154 5.91772 13.2253 5.50402C12.642 4.99255 11.4734 4.53284 10.4244 4.53284C9.55879 4.53284 8.87661 4.68608 8.43762 5.05467C8.23292 5.2136 8.06722 5.41757 7.95324 5.6509C7.83927 5.88424 7.78006 6.14072 7.78017 6.40065C7.78731 6.60305 7.83974 6.80124 7.93358 6.98048C8.02742 7.15973 8.16025 7.31543 8.32221 7.43601C8.67257 7.75491 9.50452 8.05171 10.818 8.32643C14.0689 9.03048 16.3971 9.74281 17.8027 10.4634C19.2083 11.184 20.2312 12.0772 20.8715 13.143C21.5159 14.2231 21.8484 15.462 21.8319 16.7212C21.8398 18.2468 21.3941 19.7401 20.552 21.0097C19.6781 22.3353 18.4332 23.3714 16.9742 23.9874C15.4408 24.6652 13.509 25.0027 11.1787 25C7.08563 25 4.2511 24.209 2.67514 22.6269C1.09919 21.0449 0.207471 19.0335 0 16.5928Z" fill="white"></path> </svg> </a></div>
+                                <p>© 2000–2023 Scand Poland Sp. z.o.o.<br>All Rights Reserved.</p>
+                            </div>
+                            <div class="footer__docs">
+                                <a href="#" title="Privacy policy">Privacy policy</a>
+                                <a href="#" title="Terms of Service">Terms of Service</a>
+                            </div>
+                        </div>
+                        <div class="footer__social">
+                            <a href="https://www.linkedin.com/company/scand/" class="footer-socials-list__item" target="_blank" rel="nofollow noopener noreferrer" title="LinkedIn">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social__svg"> <rect width="39.9996" height="39.9996" rx="3" fill="white"></rect> <path d="M31.2005 22.352V30.3994H26.571V22.8909C26.571 21.0047 25.9014 19.7175 24.2256 19.7175C22.9464 19.7175 22.1851 20.585 21.8502 21.4242C21.7281 21.7242 21.6967 22.1417 21.6967 22.5617V30.3994H17.0656C17.0656 30.3994 17.1279 17.6825 17.0656 16.3649H21.6962V18.3543C21.6868 18.3691 21.6746 18.3852 21.6658 18.3996H21.6962V18.3543C22.3114 17.3993 23.4102 16.0352 25.8695 16.0352C28.9164 16.0352 31.2005 18.0411 31.2005 22.352ZM12.2213 9.59961C10.637 9.59961 9.60071 10.6468 9.60071 12.024C9.60071 13.3711 10.607 14.4501 12.1598 14.4501H12.1907C13.8057 14.4501 14.8101 13.3713 14.8101 12.024C14.7796 10.6468 13.8057 9.59961 12.2213 9.59961ZM9.87575 30.3994H14.5051V16.3649H9.87575V30.3994Z" fill="#1C85C8"></path> </svg>
+                            </a>
+                            <a href="https://www.facebook.com/SCAND-152055174819781/" class="footer-socials-list__item" target="_blank" rel="nofollow noopener noreferrer" title="Facebook">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social__svg"> <rect x="0.000190735" width="39.9996" height="39.9996" rx="3" fill="white"></rect> <path d="M25.2219 9.60394L22.5247 9.59961C19.4944 9.59961 17.5361 11.6088 17.5361 14.7185V17.0786H14.8242C14.5898 17.0786 14.4001 17.2686 14.4001 17.5029V20.9225C14.4001 21.1569 14.5901 21.3466 14.8242 21.3466H17.5361V29.9753C17.5361 30.2096 17.7259 30.3994 17.9603 30.3994H21.4986C21.7329 30.3994 21.9227 30.2094 21.9227 29.9753V21.3466H25.0936C25.328 21.3466 25.5177 21.1569 25.5177 20.9225L25.519 17.5029C25.519 17.3904 25.4742 17.2827 25.3948 17.203C25.3154 17.1234 25.2072 17.0786 25.0947 17.0786H21.9227V15.0779C21.9227 14.1163 22.1519 13.6281 23.4045 13.6281L25.2215 13.6274C25.4556 13.6274 25.6454 13.4375 25.6454 13.2033V10.0281C25.6454 9.79414 25.4558 9.60437 25.2219 9.60394Z" fill="#1C85C8"></path> </svg>
+                            </a>
+                            <a href="https://twitter.com/ScandLtd" class="footer-socials-list__item" target="_blank" rel="nofollow noopener noreferrer" title="Twitter">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social__svg"> <rect x="-0.000404358" width="39.9996" height="39.9996" rx="3" fill="white"></rect> <path d="M31.8093 13.472C30.94 13.8575 30.006 14.1181 29.0255 14.2352C30.0262 13.6354 30.7947 12.6855 31.1567 11.5536C30.22 12.1091 29.1828 12.5125 28.0787 12.7298C27.1946 11.7878 25.9348 11.1992 24.5407 11.1992C21.8639 11.1992 19.6937 13.3693 19.6937 16.0461C19.6937 16.426 19.7366 16.7959 19.8192 17.1507C15.7909 16.9485 12.2193 15.0189 9.82873 12.0863C9.4115 12.8022 9.17243 13.6348 9.17243 14.5231C9.17243 16.2048 10.0281 17.6884 11.3287 18.5576C10.5342 18.5324 9.78678 18.3144 9.13335 17.9513C9.13289 17.9715 9.13289 17.9918 9.13289 18.0122C9.13289 20.3607 10.8037 22.3196 13.021 22.765C12.6143 22.8757 12.1861 22.9352 11.744 22.9352C11.4317 22.9352 11.128 22.9047 10.832 22.848C11.4489 24.7736 13.2389 26.1752 15.3599 26.2142C13.701 27.5143 11.6111 28.2891 9.34012 28.2891C8.94887 28.2891 8.56306 28.2662 8.18385 28.2212C10.3289 29.5966 12.8767 30.399 15.6139 30.399C24.5293 30.399 29.4047 23.0132 29.4047 16.6081C29.4047 16.3979 29.3999 16.1889 29.3906 15.981C30.3378 15.2976 31.1595 14.444 31.8093 13.472Z" fill="#1C85C8"></path> </svg> 
+                            </a>
+                            <a href="https://www.youtube.com/user/ScandLtdTeam/" class="footer-socials-list__item" target="_blank" rel="nofollow noopener noreferrer" title="YouTube">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social__svg"> <g clip-path="url(#clip111)"> <path d="M17.5088 23.7471L24.0145 20.0001L17.5088 16.2532V23.7471Z" fill="white"></path> <path d="M37.1152 0H2.88483C1.2915 0 0 1.2915 0 2.88483V37.1152C0 38.7085 1.2915 40 2.88483 40H37.1152C38.7085 40 40 38.7085 40 37.1152V2.88483C40 1.2915 38.7085 0 37.1152 0ZM32.4969 20.0204C32.4969 20.0204 32.4969 24.0765 31.9824 26.0324C31.694 27.103 30.8499 27.9471 29.7794 28.2352C27.8235 28.75 20 28.75 20 28.75C20 28.75 12.197 28.75 10.2206 28.2147C9.15009 27.9266 8.30597 27.0822 8.01758 26.0117C7.50275 24.0765 7.50275 20 7.50275 20C7.50275 20 7.50275 15.9442 8.01758 13.9883C8.30566 12.9178 9.17053 12.0529 10.2206 11.7648C12.1765 11.25 20 11.25 20 11.25C20 11.25 27.8235 11.25 29.7794 11.7853C30.8499 12.0734 31.694 12.9178 31.9824 13.9883C32.5177 15.9442 32.4969 20.0204 32.4969 20.0204Z" fill="white"></path> </g> <defs> <clipPath id="clip111"> <rect width="40" height="40" fill="white"></rect> </clipPath> </defs> </svg> 
+                            </a>
+                            <a href="https://www.pinterest.com/scand0748/" class="footer-socials-list__item" target="_blank" rel="nofollow noopener noreferrer" title="Pinterest">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-social__svg"> <rect width="39.9996" height="39.9996" rx="3" fill="white"></rect> <path d="M20.4558 10C14.9347 10.0008 12 13.5134 12 17.3434C12 19.1193 12.9995 21.3352 14.5999 22.0377C15.0564 22.2418 14.996 21.9927 15.3887 20.501C15.4198 20.3768 15.4038 20.2693 15.3031 20.1535C13.0154 17.5259 14.8567 12.1242 20.1294 12.1242C27.7602 12.1242 26.3344 22.6093 21.457 22.6093C20.1999 22.6093 19.2633 21.6293 19.5595 20.4168C19.9187 18.9726 20.622 17.4201 20.622 16.3793C20.622 13.7559 16.6861 14.1451 16.6861 17.6209C16.6861 18.6951 17.0688 19.4201 17.0688 19.4201C17.0688 19.4201 15.8024 24.5002 15.5675 25.4494C15.1697 27.0561 15.6212 29.6569 15.6606 29.8811C15.6849 30.0044 15.8243 30.0436 15.9023 29.9419C16.0273 29.7794 17.558 27.6111 17.9869 26.0436C18.143 25.4727 18.7833 23.156 18.7833 23.156C19.2054 23.9127 20.4222 24.546 21.7188 24.546C25.5758 24.546 28.3636 21.1793 28.3636 17.0018C28.3502 12.9967 24.8986 10 20.4558 10V10Z" fill="#1C85C8"></path> </svg>
+                            </a>
+                        </div>
+                        <ul class="footer__contacts">
+                            <li>Phone: <a href="tel:+17738314876">+1 (773) 831-4876</a></li>
+                            <li>Skype: <a href="skype:scand.ltd">scand.ltd</a></li>
+                            <li>Telegram: <a href="https://t.me/SCAND_ltd">Scand.Ltd</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a class="scroll-top" href="#">
+            <svg class="scroll-header__icon" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 341.333 341.333"> <path d="M170.667 0L0 170.667l30.187 30.186L149.333 81.707v259.626H192V81.707l119.147 119.146 30.186-30.186z"></path></svg>
+        </a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
